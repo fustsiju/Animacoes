@@ -1,0 +1,84 @@
+
+body{
+    background-color: black;
+}
+.container1{
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    background: black;
+    margin: 100px;
+}
+.barra1{
+    height:100px;
+    width: 10px;
+    background-color: chartreuse;
+    box-shadow: 0 0 50px 0 chartreuse;
+    border-radius: 20px;
+    animation: giro 1s infinite;
+    animation-delay: 0s infinite;
+}
+.container2{
+    float: right;
+    width: 100px;
+    height: 100px;
+    background: black;
+    margin: 160px;
+    margin-top: 125px;
+}
+.barra2{
+    height:10px;
+    width: 100px;
+    background-color: chartreuse;
+    box-shadow: 0 0 50px 0 chartreuse;
+    border-radius: 20px;
+    animation: giro2 1s infinite;
+    animation-delay: 0s;
+}
+.container3{
+    position: fixed;
+    top:60%;
+    max-width: 800px;
+    height: 100px;
+    background: black;
+    transform: rotate(90deg);
+    left: 50%;
+}
+.barra3{
+    height:10px;
+    width: 100px;
+    background-color: chartreuse;
+    box-shadow: 0 0 50px 0 chartreuse;
+    border-radius: 20px;
+    animation: giro3 1s infinite;
+    animation-delay: 0.2s;
+}
+.bola{
+    position:absolute;
+    margin:110px;
+    height: 20px;
+    width:20px;
+    background: chartreuse;
+    box-shadow: 0 0 50px 0 chartreuse;
+    border-radius: 50px;
+    animation: deslize 1s infinite;
+}
+
+@keyframes giro {
+    50% {transform: rotate(360deg);}
+  }
+  @keyframes giro2 {
+    50% {transform: rotate(-360deg);}
+  }
+  @keyframes giro3 {
+    50% {transform: rotate(-360deg);}
+  }
+  @keyframes deslize{
+    0% {top:0; left:0}
+    25% {top:0;left:80%}
+    50% {left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        top:50%;}
+    100% {top:0; left:0;}
+  }
